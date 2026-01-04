@@ -1,0 +1,15 @@
+Baseline Results
+================================================================================
+
+Problem(100, density=0.2, alpha=1, beta=1): 25266.40561851072
+Problem(100, density=0.2, alpha=2, beta=1): 50425.30961817918
+Problem(100, density=0.2, alpha=1, beta=2): 5334401.927002504
+Problem(100, density=1, alpha=1, beta=1): 18266.18579582672
+Problem(100, density=1, alpha=2, beta=1): 36457.918462372065
+Problem(100, density=1, alpha=1, beta=2): 5404978.08899582
+Problem(1_000, density=0.2, alpha=1, beta=1): 195402.95810394012
+Problem(1_000, density=0.2, alpha=2, beta=1): 390028.72126288974
+Problem(1_000, density=0.2, alpha=1, beta=2): 37545927.70213464
+Problem(1_000, density=1, alpha=1, beta=1): 192936.23377726765
+Problem(1_000, density=1, alpha=2, beta=1): 385105.64149576554
+Problem(1_000, density=1, alpha=1, beta=2): 57580018.86872502
