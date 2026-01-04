@@ -3,3 +3,4 @@ computational-intelligence_staff/*
 requirements.lock.txt
 */__pycache__/
 */*/__pycache__/
+__pycache__/*
