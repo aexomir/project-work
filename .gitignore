@@ -1,1 +1,5 @@
 computational-intelligence_staff/*
+.venv/
+requirements.lock.txt
+*/__pycache__/
+*/*/__pycache__/
