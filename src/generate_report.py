@@ -5,13 +5,6 @@ import numpy as np
 
 
 def generate_report(results_json_path, output_path=None):
-    """
-    Generate markdown report from JSON results.
-    
-    Args:
-        results_json_path: Path to JSON results file
-        output_path: Path to save markdown report (default: outputs/conservative_comparison_report.md)
-    """
     # Load results
     with open(results_json_path, 'r') as f:
         results = json.load(f)
@@ -21,17 +14,17 @@ def generate_report(results_json_path, output_path=None):
     else:
         output_path = Path(output_path)
     
-    # Extract data
+    
     detailed_results = results['detailed']
     summary = results.get('summary', {})
     
-    # Filter valid results
+    
     valid_results = [r for r in detailed_results if r.get('valid', False)]
     
-    # Generate report
+    
     report_lines = []
     
-    # Header
+    
     report_lines.append("# Solution Performance Comparison Results")
     report_lines.append("")
     report_lines.append("## Executive Summary")
@@ -52,7 +45,7 @@ def generate_report(results_json_path, output_path=None):
                        f"(matches baseline, no degradation)")
     report_lines.append(f"- **Largest Problem Tested**: 100 cities")
     
-    # Extract unique seeds, densities
+    
     seeds = sorted(set(r['config']['seed'] for r in detailed_results))
     densities = sorted(set(r['config']['density'] for r in detailed_results))
     report_lines.append(f"- **Seeds Tested**: {', '.join(map(str, seeds))}")
@@ -62,7 +55,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("---")
     report_lines.append("")
     
-    # Detailed Comparison Table
+    
     report_lines.append("## Detailed Comparison Table")
     report_lines.append("")
     report_lines.append("| ID | Cities | α | β | Density | Seed | Baseline Cost | Solution Cost | "
@@ -88,7 +81,7 @@ def generate_report(results_json_path, output_path=None):
             solution_time = result['solution_time']
             valid_mark = "✅"
             
-            # Format numbers
+            
             baseline_cost_str = f"{baseline_cost:,.2f}"
             solution_cost_str = f"{solution_cost:,.2f}"
             improvement_str = f"{improvement:.2f}%"
@@ -113,11 +106,11 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("---")
     report_lines.append("")
     
-    # Statistical Analysis by Variable
+    
     report_lines.append("## Statistical Analysis by Variable")
     report_lines.append("")
     
-    # 1. Impact of Problem Size
+    
     report_lines.append("### 1. Impact of Problem Size (Cities)")
     report_lines.append("")
     report_lines.append("| Problem Size | Test Count | Avg Improvement | Std Dev | Min | Max | "
@@ -145,7 +138,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("-  **Large problems (75-100)** maintain strong performance")
     report_lines.append("")
     
-    # 2. Impact of Random Seed
+    
     report_lines.append("### 2. Impact of Random Seed (Statistical Consistency)")
     report_lines.append("")
     report_lines.append("Testing with **4 different seeds** on 10 and 20 city problems "
@@ -230,7 +223,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("-  **Robust algorithm**: Not dependent on lucky/unlucky city configurations")
     report_lines.append("")
     
-    # 3. Impact of Graph Density
+    
     report_lines.append("### 3. Impact of Graph Density")
     report_lines.append("")
     report_lines.append("Testing with **3 density levels** on 10 and 20 city problems "
@@ -291,7 +284,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("-  **Algorithm adapts well** to both sparse and dense connectivity")
     report_lines.append("")
     
-    # 4. Impact of Beta Parameter
+    
     report_lines.append("### 4. Impact of Beta Parameter (Weight Penalty)")
     report_lines.append("")
     report_lines.append("| Beta (β) | Test Count | Avg Improvement | Description |")
@@ -323,7 +316,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("-  **Smooth scaling**: Performance improves consistently with higher β")
     report_lines.append("")
     
-    # 5. Impact of Alpha Parameter
+    
     report_lines.append("### 5. Impact of Alpha Parameter (Cost Scaling)")
     report_lines.append("")
     report_lines.append("| Alpha (α) | Test Count | Avg Improvement | Best Case |")
@@ -401,7 +394,7 @@ def generate_report(results_json_path, output_path=None):
     
     report_lines.append("")
     
-    # Execution Performance
+    
     report_lines.append("###  Execution Performance")
     report_lines.append("")
     report_lines.append("| Problem Size | β=1.0 Time | β=1.5 Time | β=2.0 Time | Observation |")
@@ -441,7 +434,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("---")
     report_lines.append("")
     
-    # Comprehensive Conclusion
+    
     report_lines.append("## Comprehensive Conclusion")
     report_lines.append("")
     report_lines.append("### Overall Performance")
@@ -497,7 +490,7 @@ def generate_report(results_json_path, output_path=None):
     report_lines.append("*Generated by: generate_report.py*")
     report_lines.append(f"*Date: {datetime.now().strftime('%B %d, %Y')}*")
     
-    # Write report
+    
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, 'w') as f:
         f.write('\n'.join(report_lines))

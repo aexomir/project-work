@@ -13,16 +13,6 @@ from generate_test_cases import test_cases
 
 
 def run_conservative_comparison(test_cases_list, output_dir="outputs"):
-    """
-    Run Conservative optimizer on all test cases and collect results.
-    
-    Args:
-        test_cases_list: List of test case configuration dicts
-        output_dir: Directory to save results
-    
-    Returns:
-        Dictionary with all results
-    """
     results = {
         'summary': {},
         'detailed': []
@@ -42,7 +32,7 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
               f"density={test_config['density']:.1f}, seed={test_config['seed']}")
         
         try:
-            # Create problem instance
+            
             problem = Problem(
                 num_cities=test_config['num_cities'],
                 alpha=test_config['alpha'],
@@ -51,12 +41,12 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
                 seed=test_config['seed']
             )
             
-            # Calculate baseline cost
+            
             baseline_start = time.time()
             baseline_cost = problem.baseline()
             baseline_time = time.time() - baseline_start
             
-            # Run Conservative optimizer
+            
             optimizer = ConservativeOptimizer(
                 problem,
                 max_iterations=1,
@@ -68,10 +58,10 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
             solution, solution_cost = optimizer.optimize()
             solution_time = time.time() - solution_start
             
-            # Validate solution
+            
             is_valid, error_msg = validate_solution(problem, solution)
             
-            # Calculate improvement and speedup
+            
             if baseline_cost > 0:
                 improvement = ((baseline_cost - solution_cost) / baseline_cost) * 100
                 speedup = baseline_cost / solution_cost if solution_cost > 0 else 0
@@ -79,7 +69,7 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
                 improvement = 0.0
                 speedup = 0.0
             
-            # Store results
+            
             test_result = {
                 'id': test_id,
                 'config': {
@@ -101,7 +91,7 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
             
             results['detailed'].append(test_result)
             
-            # Print progress
+            
             status = "✓" if is_valid else "✗"
             print(f"  {status} Baseline: {baseline_cost:,.2f}, "
                   f"Solution: {solution_cost:,.2f}, "
@@ -122,7 +112,7 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
         
         print()
     
-    # Calculate summary statistics
+    
     valid_results = [r for r in results['detailed'] if r.get('valid', False)]
     
     if valid_results:
@@ -161,7 +151,7 @@ def run_conservative_comparison(test_cases_list, output_dir="outputs"):
         print(f"Average Time: {results['summary']['avg_time']:.4f}s")
         print()
     
-    # Save results to JSON
+    
     output_path = Path(output_dir)
     output_path.mkdir(exist_ok=True)
     
