@@ -1,5 +1,9 @@
 """
-Helper functions for TTP optimization
+Helper functions for TTP optimization and algorithm comparison
+
+This module provides utility functions used by the algorithm comparison
+framework, including tour generation, route statistics extraction, and
+other helper functions for evaluating algorithm performance.
 """
 
 import numpy as np

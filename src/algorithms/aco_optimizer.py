@@ -7,7 +7,7 @@ import networkx as nx
 from typing import List, Tuple, Dict
 import time
 
-from optimizers.base_optimizer import BaseOptimizer
+from algorithms.base_optimizer import BaseOptimizer
 from utils.evaluator import evaluate_solution
 
 

@@ -9,7 +9,7 @@ from pathlib import Path
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from optimizers.conservative_optimizer import ConservativeOptimizer
+from algorithms.conservative_optimizer import ConservativeOptimizer
 
 
 def solution(p):
@@ -44,7 +44,7 @@ def solution(p):
 # Alternative: Use Simulated Annealing for potentially better solutions (slower)
 def solution_sa(p):
     """Alternative solution using Simulated Annealing"""
-    from optimizers.simulated_annealing_optimizer import SimulatedAnnealingOptimizer
+    from algorithms.simulated_annealing_optimizer import SimulatedAnnealingOptimizer
     
     optimizer = SimulatedAnnealingOptimizer(
         p,
@@ -62,7 +62,7 @@ def solution_sa(p):
 # Alternative: Use Local Search for best quality
 def solution_ls(p):
     """Alternative solution using Local Search"""
-    from optimizers.local_search_optimizer import LocalSearchOptimizer
+    from algorithms.local_search_optimizer import LocalSearchOptimizer
     
     optimizer = LocalSearchOptimizer(
         p,

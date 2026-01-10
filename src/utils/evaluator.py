@@ -1,5 +1,9 @@
 """
 Solution evaluation and validation for Traveling Thief Problem
+
+This module provides functions for evaluating and validating solutions,
+which are used in the algorithm comparison framework to assess the
+performance of different optimization algorithms.
 """
 
 import networkx as nx

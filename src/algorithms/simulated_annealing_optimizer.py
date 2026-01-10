@@ -7,7 +7,7 @@ from typing import List, Tuple
 import time
 import math
 
-from optimizers.base_optimizer import BaseOptimizer
+from algorithms.base_optimizer import BaseOptimizer
 from utils.evaluator import evaluate_solution
 from utils.helpers import nearest_neighbor_tour
 
