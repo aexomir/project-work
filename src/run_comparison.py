@@ -5,6 +5,7 @@ Comparison framework for TTP optimization algorithms
 import sys
 import time
 import json
+import argparse
 from pathlib import Path
 
 # Add src to path
@@ -41,10 +42,10 @@ def compare_algorithms(problem_configs, output_dir="outputs"):
     algorithms = [
         ('Greedy', GreedyOptimizer, {'max_iterations': 1, 'verbose': True}),
         ('Conservative', ConservativeOptimizer, {'max_iterations': 1, 'verbose': True}),
-        ('SimulatedAnnealing', SimulatedAnnealingOptimizer, {'max_iterations': 5000, 'verbose': True}),
+        # ('SimulatedAnnealing', SimulatedAnnealingOptimizer, {'max_iterations': 5000, 'verbose': True}),
         ('GeneticAlgorithm', GeneticOptimizer, {'max_iterations': 300, 'verbose': True, 'population_size': 100}),
-        ('AntColony', ACOOptimizer, {'max_iterations': 150, 'verbose': True, 'num_ants': 40}),
-        ('LocalSearch', LocalSearchOptimizer, {'max_iterations': 20, 'verbose': True}),  # Runs LAST (slowest)
+        # ('AntColony', ACOOptimizer, {'max_iterations': 150, 'verbose': True, 'num_ants': 40}),
+        # ('LocalSearch', LocalSearchOptimizer, {'max_iterations': 20, 'verbose': True}),
     ]
     
     print("=" * 80)
@@ -192,7 +193,7 @@ def compare_algorithms(problem_configs, output_dir="outputs"):
     output_path.mkdir(exist_ok=True)
     
     # Save JSON results
-    json_path = output_path / "comparison_results.json"
+    json_path = output_path / "alg_comparison_results.json"
     with open(json_path, 'w') as f:
         json.dump(results, f, indent=2)
     print(f"Results saved to {json_path}")
@@ -203,9 +204,15 @@ def compare_algorithms(problem_configs, output_dir="outputs"):
 def main():
     """Run comparison on standard test configurations"""
     
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Compare TTP optimization algorithms')
+    parser.add_argument('--large', action='store_true',
+                       help='Run comparison on large problems (1000 cities) in addition to standard tests')
+    args = parser.parse_args()
+    
     # Standard test configurations with density from 0.5 to 2.0 in 0.5 increments
     test_configs = []
-    base_num_cities = 20
+    base_num_cities = 100
     for density in [0.5, 1.0, 1.5, 2.0]:
         for alpha in [1, 2]:
             for beta in [1, 2]:
@@ -218,13 +225,26 @@ def main():
                 })
     
     print(f"Running comparison on {base_num_cities}-city problems...")
-    results_base_num_cities = compare_algorithms(test_configs)
+    results_base = compare_algorithms(test_configs)
     
-    # Uncomment to run on 200-city problems (will take much longer)
-    # print("\n\nRunning comparison on 200-city problems...")
-    # results_200 = compare_algorithms(large_test_configs)
+    # Run large test configurations only if --large flag is passed
+    if args.large:
+        print("\n\nRunning comparison on 1000-city problems...")
+        large_test_configs = []
+        for density in [0.5, 1.0, 1.5, 2.0]:
+            for alpha in [1, 2]:
+                for beta in [1, 2]:
+                    large_test_configs.append({
+                        'num_cities': 1000,
+                        'density': density,
+                        'alpha': alpha,
+                        'beta': beta,
+                        'seed': 42
+                    })
+        results_large = compare_algorithms(large_test_configs)
+        return {'standard': results_base, 'large': results_large}
     
-    return results_base_num_cities
+    return results_base
 
 
 if __name__ == "__main__":
