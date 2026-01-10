@@ -1,0 +1,939 @@
+{
+  "summary": {
+    "Greedy": {
+      "avg_improvement": -176.42435899661575,
+      "min_improvement": -578.7111845009057,
+      "max_improvement": -8.745741178413445,
+      "avg_time": 0.2711356431245804,
+      "success_rate": 100.0
+    },
+    "Conservative": {
+      "avg_improvement": 88.08077732093594,
+      "min_improvement": 70.05108091985934,
+      "max_improvement": 97.71757759342171,
+      "avg_time": 7.845784232020378,
+      "success_rate": 100.0
+    },
+    "GeneticAlgorithm": {
+      "avg_improvement": -1612.4734887617792,
+      "min_improvement": -3288.4856868935117,
+      "max_improvement": -306.62065212782903,
+      "avg_time": 86.73006500303745,
+      "success_rate": 100.0
+    }
+  },
+  "detailed": [
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 0.5,
+        "alpha": 1,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 18811.322295439797,
+      "algorithms": {
+        "Greedy": {
+          "cost": 25568.953195367478,
+          "time": 1.0787267684936523,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -35.92321046759085,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 54.93434157054073,
+            "total_gold_collected": 24040.492761837,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5155355826478065
+          }
+        },
+        "Conservative": {
+          "cost": 5633.7876921657235,
+          "time": 27.280225038528442,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 70.05108091985934,
+          "solution_length": 189,
+          "stats": {
+            "total_distance": 71.16879254570134,
+            "total_gold_collected": 13490.566729677717,
+            "depot_returns": 89,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.2892980292930599
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 102471.4332914253,
+          "time": 329.76185393333435,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -444.7327502132385,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 25.914811273802812,
+            "total_gold_collected": 21289.959657943087,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.45655186295637723
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 0.5,
+        "alpha": 1,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 4696149.778603789,
+      "algorithms": {
+        "Greedy": {
+          "cost": 31873293.78829844,
+          "time": 1.0688540935516357,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -578.7111845009057,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 54.93434157054073,
+            "total_gold_collected": 24040.492761837,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5155355826478065
+          }
+        },
+        "Conservative": {
+          "cost": 168134.5761334358,
+          "time": 27.09676504135132,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 96.41973565452541,
+          "solution_length": 184,
+          "stats": {
+            "total_distance": 68.35659553746393,
+            "total_gold_collected": 6802.627646971283,
+            "depot_returns": 84,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.14587873228141926
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 159126426.93589497,
+          "time": 302.29646492004395,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -3288.4444584986127,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.86950496989199,
+            "total_gold_collected": 21318.556402138038,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.45716510492801343
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 0.5,
+        "alpha": 2,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 37545.81383775821,
+      "algorithms": {
+        "Greedy": {
+          "cost": 50485.557131157424,
+          "time": 1.0850780010223389,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -34.463877515917034,
+          "solution_length": 154,
+          "stats": {
+            "total_distance": 49.974595584328206,
+            "total_gold_collected": 23238.210681540353,
+            "depot_returns": 55,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.49833107008597577
+          }
+        },
+        "Conservative": {
+          "cost": 5685.817867081339,
+          "time": 27.58511519432068,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 84.85632009030162,
+          "solution_length": 184,
+          "stats": {
+            "total_distance": 68.35659553746393,
+            "total_gold_collected": 6802.627646971283,
+            "depot_returns": 84,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.14587873228141926
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 204916.95177157674,
+          "time": 332.3482418060303,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -445.77842594398794,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 25.914811273802812,
+            "total_gold_collected": 21289.959657943087,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.45655186295637723
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 0.5,
+        "alpha": 2,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 18784368.622155804,
+      "algorithms": {
+        "Greedy": {
+          "cost": 127233506.16210487,
+          "time": 1.085602045059204,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -577.3371451624698,
+          "solution_length": 154,
+          "stats": {
+            "total_distance": 49.974595584328206,
+            "total_gold_collected": 23238.210681540353,
+            "depot_returns": 55,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.49833107008597577
+          }
+        },
+        "Conservative": {
+          "cost": 666883.9749882409,
+          "time": 27.336488246917725,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 96.44979297200513,
+          "solution_length": 190,
+          "stats": {
+            "total_distance": 71.8308752993608,
+            "total_gold_collected": 6768.544576311291,
+            "depot_returns": 90,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1451478389563449
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 636505642.1350653,
+          "time": 306.4594271183014,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -3288.4856868935117,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.86950496989199,
+            "total_gold_collected": 21318.556402138038,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.45716510492801343
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.0,
+        "alpha": 1,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 18266.185795826725,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19950.47542043149,
+          "time": 0.0016472339630126953,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -9.220806376499102,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 5048.625487291512,
+          "time": 1.3450329303741455,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 72.36081170024575,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 12489.037843665326,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.2678207749412422
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 74274.0838018715,
+          "time": 9.758396863937378,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -306.62065212782903,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.0,
+        "alpha": 1,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 5404978.08899582,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19308346.574291397,
+          "time": 0.0016601085662841797,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -257.2326521286353,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 124459.0548795453,
+          "time": 1.3601479530334473,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.6973254501635,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 153951760.21358803,
+          "time": 9.787081003189087,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3327347251175,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.0,
+        "alpha": 2,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 36457.91846237206,
+      "algorithms": {
+        "Greedy": {
+          "cost": 39646.43365012813,
+          "time": 0.0016639232635498047,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -8.745741178413445,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 5081.217475992253,
+          "time": 1.3431661128997803,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 86.0627877555968,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 148528.19352604816,
+          "time": 9.779847860336304,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -307.396252420014,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.0,
+        "alpha": 2,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 21619688.996595442,
+      "algorithms": {
+        "Greedy": {
+          "cost": 77164758.11373718,
+          "time": 0.0016520023345947266,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -256.9189090827749,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 493452.6258908374,
+          "time": 1.3708999156951904,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.71757759342171,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 6278.539655139588,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.13463994400430968
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 615806975.6887523,
+          "time": 9.677098035812378,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3618602734127,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.5,
+        "alpha": 1,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 18266.185795826725,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19950.47542043149,
+          "time": 0.0016739368438720703,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -9.220806376499102,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 5048.625487291512,
+          "time": 1.357882022857666,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 72.36081170024575,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 12489.037843665326,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.2678207749412422
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 74274.0838018715,
+          "time": 9.79018235206604,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -306.62065212782903,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.5,
+        "alpha": 1,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 5404978.08899582,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19308346.574291397,
+          "time": 0.0016741752624511719,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -257.2326521286353,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 124459.0548795453,
+          "time": 1.3706998825073242,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.6973254501635,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 153951760.21358803,
+          "time": 9.71463918685913,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3327347251175,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.5,
+        "alpha": 2,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 36457.91846237206,
+      "algorithms": {
+        "Greedy": {
+          "cost": 39646.43365012813,
+          "time": 0.0016436576843261719,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -8.745741178413445,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 5081.217475992253,
+          "time": 1.3319988250732422,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 86.0627877555968,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 148528.19352604816,
+          "time": 9.771841049194336,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -307.396252420014,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 1.5,
+        "alpha": 2,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 21619688.996595442,
+      "algorithms": {
+        "Greedy": {
+          "cost": 77164758.11373718,
+          "time": 0.00164794921875,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -256.9189090827749,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 493452.6258908374,
+          "time": 1.3631219863891602,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.71757759342171,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 6278.539655139588,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.13463994400430968
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 615806975.6887523,
+          "time": 9.684437990188599,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3618602734127,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 2.0,
+        "alpha": 1,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 18266.185795826725,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19950.47542043149,
+          "time": 0.0016777515411376953,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -9.220806376499102,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 5048.625487291512,
+          "time": 1.3548228740692139,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 72.36081170024575,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 12489.037843665326,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.2678207749412422
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 74274.0838018715,
+          "time": 9.70346999168396,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -306.62065212782903,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 2.0,
+        "alpha": 1,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 5404978.08899582,
+      "algorithms": {
+        "Greedy": {
+          "cost": 19308346.574291397,
+          "time": 0.0016529560089111328,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -257.2326521286353,
+          "solution_length": 161,
+          "stats": {
+            "total_distance": 50.700896245481886,
+            "total_gold_collected": 25083.129146382504,
+            "depot_returns": 62,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5378943654448775
+          }
+        },
+        "Conservative": {
+          "cost": 124459.0548795453,
+          "time": 1.3397717475891113,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.6973254501635,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 153951760.21358803,
+          "time": 9.721510887145996,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3327347251175,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 2.0,
+        "alpha": 2,
+        "beta": 1,
+        "seed": 42
+      },
+      "baseline_cost": 36457.91846237206,
+      "algorithms": {
+        "Greedy": {
+          "cost": 39646.43365012813,
+          "time": 0.0016598701477050781,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -8.745741178413445,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 5081.217475992253,
+          "time": 1.3539807796478271,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 86.0627877555968,
+          "solution_length": 182,
+          "stats": {
+            "total_distance": 64.66202154764093,
+            "total_gold_collected": 6304.832750805099,
+            "depot_returns": 82,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.1352037854583023
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 148528.19352604816,
+          "time": 9.769654035568237,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -307.396252420014,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 19.974077694861705,
+            "total_gold_collected": 18463.59278827729,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.3959419284860376
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "num_cities": 100,
+        "density": 2.0,
+        "alpha": 2,
+        "beta": 2,
+        "seed": 42
+      },
+      "baseline_cost": 21619688.996595442,
+      "algorithms": {
+        "Greedy": {
+          "cost": 77164758.11373718,
+          "time": 0.0016558170318603516,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -256.9189090827749,
+          "solution_length": 156,
+          "stats": {
+            "total_distance": 47.20371035043725,
+            "total_gold_collected": 24841.78451228382,
+            "depot_returns": 57,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.5327188581126608
+          }
+        },
+        "Conservative": {
+          "cost": 493452.6258908374,
+          "time": 1.3424291610717773,
+          "valid": true,
+          "error": null,
+          "improvement_pct": 97.71757759342171,
+          "solution_length": 187,
+          "stats": {
+            "total_distance": 68.66078961612116,
+            "total_gold_collected": 6278.539655139588,
+            "depot_returns": 87,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.13463994400430968
+          }
+        },
+        "GeneticAlgorithm": {
+          "cost": 615806975.6887523,
+          "time": 9.656893014907837,
+          "valid": true,
+          "error": null,
+          "improvement_pct": -2748.3618602734127,
+          "solution_length": 101,
+          "stats": {
+            "total_distance": 21.721866688226086,
+            "total_gold_collected": 20664.46812093529,
+            "depot_returns": 2,
+            "cities_visited": 99,
+            "avg_gold_ratio": 0.4431385295789317
+          }
+        }
+      }
+    }
+  ]
+}

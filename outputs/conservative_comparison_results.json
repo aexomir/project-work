@@ -1,0 +1,793 @@
+{
+  "summary": {
+    "total_tests": 43,
+    "valid_solutions": 43,
+    "success_rate": 100.0,
+    "avg_improvement": 83.50708408742157,
+    "min_improvement": 45.04799329127208,
+    "max_improvement": 97.2915417553487,
+    "std_improvement": 11.10572098878238,
+    "avg_speedup": 10.964773012264015,
+    "min_speedup": 1.8197697589106823,
+    "max_speedup": 36.92137406861695,
+    "avg_time": 4.142148217489553,
+    "min_time": 0.00014281272888183594,
+    "max_time": 27.767035722732544
+  },
+  "detailed": [
+    {
+      "id": 1,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 33156.83521107511,
+      "baseline_time": 0.0003809928894042969,
+      "solution_cost": 11119.269087522749,
+      "solution_time": 0.002797842025756836,
+      "improvement_pct": 66.46462481495016,
+      "speedup": 2.9819257857768138,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 2,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 123
+      },
+      "baseline_cost": 27389.130549363217,
+      "baseline_time": 9.107589721679688e-05,
+      "solution_cost": 5178.414496727768,
+      "solution_time": 0.0020422935485839844,
+      "improvement_pct": 81.09317677173158,
+      "speedup": 5.289095835543942,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 3,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 456
+      },
+      "baseline_cost": 35294.311742104364,
+      "baseline_time": 8.392333984375e-05,
+      "solution_cost": 9643.972074330135,
+      "solution_time": 0.0018889904022216797,
+      "improvement_pct": 72.6755627229717,
+      "speedup": 3.659727700378673,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 4,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 789
+      },
+      "baseline_cost": 31813.963479156188,
+      "baseline_time": 7.987022399902344e-05,
+      "solution_cost": 4764.89203068648,
+      "solution_time": 0.0008928775787353516,
+      "improvement_pct": 85.02263940232304,
+      "speedup": 6.676743832655687,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 5,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 79309.77696702775,
+      "baseline_time": 0.00016307830810546875,
+      "solution_cost": 7425.796975866371,
+      "solution_time": 0.037915706634521484,
+      "improvement_pct": 90.63697155654143,
+      "speedup": 10.680305053421508,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 6,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 123
+      },
+      "baseline_cost": 42240.766543770915,
+      "baseline_time": 0.00016689300537109375,
+      "solution_cost": 5699.394235407924,
+      "solution_time": 0.07433199882507324,
+      "improvement_pct": 86.50736077551511,
+      "speedup": 7.4114484450552505,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 7,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 456
+      },
+      "baseline_cost": 42545.795179880195,
+      "baseline_time": 0.0001690387725830078,
+      "solution_cost": 8508.113241084477,
+      "solution_time": 0.025475740432739258,
+      "improvement_pct": 80.00245804523607,
+      "speedup": 5.0006145868431275,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 8,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 789
+      },
+      "baseline_cost": 65513.971363203476,
+      "baseline_time": 0.00015735626220703125,
+      "solution_cost": 6979.488960021387,
+      "solution_time": 0.03353381156921387,
+      "improvement_pct": 89.34656407664903,
+      "speedup": 9.386643024792853,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 9,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.3,
+        "seed": 42
+      },
+      "baseline_cost": 93985.29777917705,
+      "baseline_time": 8.082389831542969e-05,
+      "solution_cost": 13437.09419891671,
+      "solution_time": 0.0014209747314453125,
+      "improvement_pct": 85.70298278940628,
+      "speedup": 6.9944659453793285,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 10,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.3,
+        "seed": 42
+      },
+      "baseline_cost": 88694.09836411274,
+      "baseline_time": 0.00017404556274414062,
+      "solution_cost": 13360.1959425172,
+      "solution_time": 0.03583693504333496,
+      "improvement_pct": 84.93677010203086,
+      "speedup": 6.638682452392374,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 11,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.7,
+        "seed": 42
+      },
+      "baseline_cost": 32051.866359683063,
+      "baseline_time": 7.224082946777344e-05,
+      "solution_cost": 4981.488822750132,
+      "solution_time": 0.0007560253143310547,
+      "improvement_pct": 84.45803820954347,
+      "speedup": 6.434194173698493,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 12,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.7,
+        "seed": 42
+      },
+      "baseline_cost": 65777.34310317405,
+      "baseline_time": 0.0001499652862548828,
+      "solution_cost": 11425.519813611543,
+      "solution_time": 0.024693965911865234,
+      "improvement_pct": 82.63000712009571,
+      "speedup": 5.75705474903747,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 13,
+      "config": {
+        "num_cities": 5,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 1748.5702886556971,
+      "baseline_time": 3.3855438232421875e-05,
+      "solution_cost": 549.565718441922,
+      "solution_time": 0.0001480579376220703,
+      "improvement_pct": 68.57056750835972,
+      "speedup": 3.181731010466014,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 14,
+      "config": {
+        "num_cities": 5,
+        "alpha": 1.0,
+        "beta": 1.2,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 5759.168781604894,
+      "baseline_time": 3.218650817871094e-05,
+      "solution_cost": 1008.7947391547167,
+      "solution_time": 0.0001430511474609375,
+      "improvement_pct": 82.48367468623488,
+      "speedup": 5.708959967842995,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 15,
+      "config": {
+        "num_cities": 5,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 34929.39123647701,
+      "baseline_time": 3.314018249511719e-05,
+      "solution_cost": 4385.982275081096,
+      "solution_time": 0.00014281272888183594,
+      "improvement_pct": 87.44329024978602,
+      "speedup": 7.963869675198623,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 16,
+      "config": {
+        "num_cities": 5,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 725740.0834150945,
+      "baseline_time": 3.2901763916015625e-05,
+      "solution_cost": 27093.05958950396,
+      "solution_time": 0.00014400482177734375,
+      "improvement_pct": 96.26683709379633,
+      "speedup": 26.78693711271544,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 17,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 2100.6773475348546,
+      "baseline_time": 6.628036499023438e-05,
+      "solution_cost": 1154.364356946081,
+      "solution_time": 0.0025680065155029297,
+      "improvement_pct": 45.04799329127208,
+      "speedup": 1.8197697589106823,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 18,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 1.2,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 6280.481752455966,
+      "baseline_time": 6.604194641113281e-05,
+      "solution_cost": 2274.1473968232817,
+      "solution_time": 0.0025479793548583984,
+      "improvement_pct": 63.790239563486,
+      "speedup": 2.761686318674447,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 19,
+      "config": {
+        "num_cities": 10,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 551113.6478451367,
+      "baseline_time": 6.699562072753906e-05,
+      "solution_cost": 84269.45407377004,
+      "solution_time": 0.002537965774536133,
+      "improvement_pct": 84.7092420223551,
+      "speedup": 6.539898162419424,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 20,
+      "config": {
+        "num_cities": 15,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 3998.1647143556193,
+      "baseline_time": 0.00011587142944335938,
+      "solution_cost": 1304.788125507692,
+      "solution_time": 0.022159337997436523,
+      "improvement_pct": 67.3653233739275,
+      "speedup": 3.064225245612146,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 21,
+      "config": {
+        "num_cities": 15,
+        "alpha": 1.0,
+        "beta": 1.2,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 11887.552384336614,
+      "baseline_time": 0.00011301040649414062,
+      "solution_cost": 2355.58855403208,
+      "solution_time": 0.022186994552612305,
+      "improvement_pct": 80.18441073592348,
+      "speedup": 5.046531731523569,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 22,
+      "config": {
+        "num_cities": 15,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 62521.66580815782,
+      "baseline_time": 0.00011491775512695312,
+      "solution_cost": 10208.79333469854,
+      "solution_time": 0.02212691307067871,
+      "improvement_pct": 83.67159095532848,
+      "speedup": 6.124295375404821,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 23,
+      "config": {
+        "num_cities": 15,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 1052583.2958820374,
+      "baseline_time": 0.00011086463928222656,
+      "solution_cost": 66201.31526662291,
+      "solution_time": 0.0221402645111084,
+      "improvement_pct": 93.71058656111886,
+      "speedup": 15.899733889618416,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 24,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 5045.005508672771,
+      "baseline_time": 0.0001552104949951172,
+      "solution_cost": 1251.610656441009,
+      "solution_time": 0.0376589298248291,
+      "improvement_pct": 75.19109435481508,
+      "speedup": 4.030810606086073,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 25,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 1.2,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 15034.749841170877,
+      "baseline_time": 0.00016117095947265625,
+      "solution_cost": 2031.0983848800734,
+      "solution_time": 0.03762316703796387,
+      "improvement_pct": 86.4906406402709,
+      "speedup": 7.402275514122181,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 26,
+      "config": {
+        "num_cities": 20,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 1330870.6525676753,
+      "baseline_time": 0.0001659393310546875,
+      "solution_cost": 36136.66385892733,
+      "solution_time": 0.03826713562011719,
+      "improvement_pct": 97.28473508757533,
+      "speedup": 36.828819001200976,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 27,
+      "config": {
+        "num_cities": 5,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 2902945.3250513584,
+      "baseline_time": 4.696846008300781e-05,
+      "solution_cost": 108360.96359366193,
+      "solution_time": 0.0001709461212158203,
+      "improvement_pct": 96.26720618337016,
+      "speedup": 26.789585739907103,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 28,
+      "config": {
+        "num_cities": 10,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 2204430.1249260027,
+      "baseline_time": 7.390975952148438e-05,
+      "solution_cost": 337057.7224336517,
+      "solution_time": 0.002549886703491211,
+      "improvement_pct": 84.70998383561982,
+      "speedup": 6.54021545333362,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 29,
+      "config": {
+        "num_cities": 15,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 4210288.184497036,
+      "baseline_time": 0.00011491775512695312,
+      "solution_cost": 264439.78544474737,
+      "solution_time": 0.02240610122680664,
+      "improvement_pct": 93.71919987761271,
+      "speedup": 15.92153834724973,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 30,
+      "config": {
+        "num_cities": 20,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 5323426.15646518,
+      "baseline_time": 0.0001690387725830078,
+      "solution_cost": 144182.77463270456,
+      "solution_time": 0.03818702697753906,
+      "improvement_pct": 97.2915417553487,
+      "speedup": 36.92137406861695,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 31,
+      "config": {
+        "num_cities": 30,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 5650.508437396363,
+      "baseline_time": 0.00027489662170410156,
+      "solution_cost": 1602.210664333478,
+      "solution_time": 0.18181610107421875,
+      "improvement_pct": 71.64484077698778,
+      "speedup": 3.526695061505525,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 32,
+      "config": {
+        "num_cities": 30,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 76150.91013688556,
+      "baseline_time": 0.00026988983154296875,
+      "solution_cost": 8990.038354143511,
+      "solution_time": 0.18151617050170898,
+      "improvement_pct": 88.19444398237209,
+      "speedup": 8.470587903753223,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 33,
+      "config": {
+        "num_cities": 30,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 4367578.608564536,
+      "baseline_time": 0.00026607513427734375,
+      "solution_cost": 161523.78799414728,
+      "solution_time": 0.18192601203918457,
+      "improvement_pct": 96.30175430208836,
+      "speedup": 27.03984758407717,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 34,
+      "config": {
+        "num_cities": 50,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 9408.5797777541,
+      "baseline_time": 0.0005350112915039062,
+      "solution_cost": 2515.586604149243,
+      "solution_time": 5.644742250442505,
+      "improvement_pct": 73.2628445145657,
+      "speedup": 3.7401136427724087,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 35,
+      "config": {
+        "num_cities": 50,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 127537.51621362272,
+      "baseline_time": 0.0005321502685546875,
+      "solution_cost": 13209.82612106441,
+      "solution_time": 5.592199087142944,
+      "improvement_pct": 89.6423997320614,
+      "speedup": 9.654746023511331,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 36,
+      "config": {
+        "num_cities": 50,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 7504461.099043543,
+      "baseline_time": 0.0005300045013427734,
+      "solution_cost": 229948.38359990317,
+      "solution_time": 5.616518974304199,
+      "improvement_pct": 96.9358441523641,
+      "speedup": 32.6354157466089,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 37,
+      "config": {
+        "num_cities": 75,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 14218.132421560427,
+      "baseline_time": 0.0009438991546630859,
+      "solution_cost": 4052.417356778393,
+      "solution_time": 24.750781059265137,
+      "improvement_pct": 71.49824437819068,
+      "speedup": 3.5085558001023904,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 38,
+      "config": {
+        "num_cities": 75,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 202052.84794608655,
+      "baseline_time": 0.0009610652923583984,
+      "solution_cost": 23204.042981299233,
+      "solution_time": 24.850776195526123,
+      "improvement_pct": 88.51585453153785,
+      "speedup": 8.707657028084563,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 39,
+      "config": {
+        "num_cities": 75,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 12485567.92177883,
+      "baseline_time": 0.0009469985961914062,
+      "solution_cost": 447374.5055451683,
+      "solution_time": 24.81649923324585,
+      "improvement_pct": 96.41686699116983,
+      "speedup": 27.908536957339535,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 40,
+      "config": {
+        "num_cities": 100,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 18811.322295439797,
+      "baseline_time": 0.0015358924865722656,
+      "solution_cost": 5633.7876921657235,
+      "solution_time": 27.588067054748535,
+      "improvement_pct": 70.05108091985934,
+      "speedup": 3.3390186715056007,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 41,
+      "config": {
+        "num_cities": 100,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 283255.92157123616,
+      "baseline_time": 0.0015292167663574219,
+      "solution_cost": 33909.74560270158,
+      "solution_time": 27.461068868637085,
+      "improvement_pct": 88.028583686935,
+      "speedup": 8.35323051048396,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 42,
+      "config": {
+        "num_cities": 100,
+        "alpha": 2.0,
+        "beta": 2.0,
+        "density": 0.5,
+        "seed": 42
+      },
+      "baseline_cost": 18784368.622155804,
+      "baseline_time": 0.001538991928100586,
+      "solution_cost": 666883.9749882409,
+      "solution_time": 27.767035722732544,
+      "improvement_pct": 96.44979297200513,
+      "speedup": 28.167371426921793,
+      "valid": true,
+      "error": null
+    },
+    {
+      "id": 43,
+      "config": {
+        "num_cities": 50,
+        "alpha": 1.0,
+        "beta": 1.5,
+        "density": 0.5,
+        "seed": 123
+      },
+      "baseline_cost": 115697.24271495843,
+      "baseline_time": 0.0005328655242919922,
+      "solution_cost": 11353.658911988643,
+      "solution_time": 2.9641308784484863,
+      "improvement_pct": 90.18675065579524,
+      "speedup": 10.190304606807459,
+      "valid": true,
+      "error": null
+    }
+  ]
+}
