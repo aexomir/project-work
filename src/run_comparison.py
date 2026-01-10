@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from baseline.baseline_impl import Problem
 from optimizers.greedy_optimizer import GreedyOptimizer
+from optimizers.conservative_optimizer import ConservativeOptimizer
 from optimizers.genetic_optimizer import GeneticOptimizer
 from optimizers.simulated_annealing_optimizer import SimulatedAnnealingOptimizer
 from optimizers.local_search_optimizer import LocalSearchOptimizer
@@ -36,13 +37,14 @@ def compare_algorithms(problem_configs, output_dir="outputs"):
         'detailed': []
     }
     
-    # Algorithm configurations
+    # Algorithm configurations (ordered from fastest to slowest)
     algorithms = [
         ('Greedy', GreedyOptimizer, {'max_iterations': 1, 'verbose': True}),
-        ('LocalSearch', LocalSearchOptimizer, {'max_iterations': 50, 'verbose': True}),
+        ('Conservative', ConservativeOptimizer, {'max_iterations': 1, 'verbose': True}),
         ('SimulatedAnnealing', SimulatedAnnealingOptimizer, {'max_iterations': 5000, 'verbose': True}),
         ('GeneticAlgorithm', GeneticOptimizer, {'max_iterations': 300, 'verbose': True, 'population_size': 100}),
         ('AntColony', ACOOptimizer, {'max_iterations': 150, 'verbose': True, 'num_ants': 40}),
+        ('LocalSearch', LocalSearchOptimizer, {'max_iterations': 20, 'verbose': True}),  # Runs LAST (slowest)
     ]
     
     print("=" * 80)
@@ -201,34 +203,37 @@ def compare_algorithms(problem_configs, output_dir="outputs"):
 def main():
     """Run comparison on standard test configurations"""
     
-    # Standard test configurations (same as baseline)
-    test_configs = [
-        {'num_cities': 100, 'density': 0.2, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 100, 'density': 0.2, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 100, 'density': 0.2, 'alpha': 1, 'beta': 2, 'seed': 42},
-        {'num_cities': 100, 'density': 1.0, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 100, 'density': 1.0, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 100, 'density': 1.0, 'alpha': 1, 'beta': 2, 'seed': 42},
-    ]
+    # Standard test configurations with density from 0.5 to 2.0 in 0.5 increments
+    test_configs = []
+    for density in [0.5, 1.0, 1.5, 2.0]:
+        for alpha in [1, 2]:
+            for beta in [1, 2]:
+                test_configs.append({
+                    'num_cities': 20,
+                    'density': density,
+                    'alpha': alpha,
+                    'beta': beta,
+                    'seed': 42
+                })
     
-    # For 1000 city problems, use reduced iterations to keep runtime reasonable
+    # For 200 city problems, use reduced iterations to keep runtime reasonable
     large_test_configs = [
-        {'num_cities': 1000, 'density': 0.2, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 1000, 'density': 0.2, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 1000, 'density': 0.2, 'alpha': 1, 'beta': 2, 'seed': 42},
-        {'num_cities': 1000, 'density': 1.0, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 1000, 'density': 1.0, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 1000, 'density': 1.0, 'alpha': 1, 'beta': 2, 'seed': 42},
+        {'num_cities': 200, 'density': 0.2, 'alpha': 1, 'beta': 1, 'seed': 42},
+        {'num_cities': 200, 'density': 0.2, 'alpha': 2, 'beta': 1, 'seed': 42},
+        {'num_cities': 200, 'density': 0.2, 'alpha': 1, 'beta': 2, 'seed': 42},
+        {'num_cities': 200, 'density': 1.0, 'alpha': 1, 'beta': 1, 'seed': 42},
+        {'num_cities': 200, 'density': 1.0, 'alpha': 2, 'beta': 1, 'seed': 42},
+        {'num_cities': 200, 'density': 1.0, 'alpha': 1, 'beta': 2, 'seed': 42},
     ]
     
-    print("Running comparison on 100-city problems...")
-    results_100 = compare_algorithms(test_configs)
+    print("Running comparison on 20-city problems...")
+    results_20 = compare_algorithms(test_configs)
     
-    # Uncomment to run on 1000-city problems (will take much longer)
-    # print("\n\nRunning comparison on 1000-city problems...")
-    # results_1000 = compare_algorithms(large_test_configs)
+    # Uncomment to run on 200-city problems (will take much longer)
+    # print("\n\nRunning comparison on 200-city problems...")
+    # results_200 = compare_algorithms(large_test_configs)
     
-    return results_100
+    return results_20
 
 
 if __name__ == "__main__":

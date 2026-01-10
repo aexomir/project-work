@@ -9,12 +9,12 @@ from pathlib import Path
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-from optimizers.genetic_optimizer import GeneticOptimizer
+from optimizers.conservative_optimizer import ConservativeOptimizer
 
 
 def solution(p):
     """
-    Solve the Traveling Thief Problem using Genetic Algorithm.
+    Solve the Traveling Thief Problem using Conservative Optimizer.
     
     Args:
         p: Problem instance
@@ -24,14 +24,14 @@ def solution(p):
         ending with (0, 0) to return to depot.
         Format: [(c1, g1), (c2, g2), ..., (cN, gN), (0, 0)]
     """
-    # Use Genetic Algorithm as it typically provides best balance of quality and runtime
-    # Parameters tuned for good performance across different problem sizes
-    optimizer = GeneticOptimizer(
+    # Use Conservative Optimizer - key strategy:
+    # - Collect minimal gold early (10-20%) to avoid weight penalty
+    # - Collect more gold later (60-80%) when closer to depot
+    # - Frequent depot returns when weight threshold exceeded
+    # - 2-opt improved tour for better route
+    optimizer = ConservativeOptimizer(
         p,
-        max_iterations=500,
-        population_size=150,
-        mutation_rate=0.15,
-        crossover_rate=0.8,
+        max_iterations=1,
         verbose=False,
         seed=42
     )
