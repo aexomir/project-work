@@ -205,35 +205,26 @@ def main():
     
     # Standard test configurations with density from 0.5 to 2.0 in 0.5 increments
     test_configs = []
+    base_num_cities = 20
     for density in [0.5, 1.0, 1.5, 2.0]:
         for alpha in [1, 2]:
             for beta in [1, 2]:
                 test_configs.append({
-                    'num_cities': 20,
+                    'num_cities': base_num_cities,
                     'density': density,
                     'alpha': alpha,
                     'beta': beta,
                     'seed': 42
                 })
     
-    # For 200 city problems, use reduced iterations to keep runtime reasonable
-    large_test_configs = [
-        {'num_cities': 200, 'density': 0.2, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 200, 'density': 0.2, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 200, 'density': 0.2, 'alpha': 1, 'beta': 2, 'seed': 42},
-        {'num_cities': 200, 'density': 1.0, 'alpha': 1, 'beta': 1, 'seed': 42},
-        {'num_cities': 200, 'density': 1.0, 'alpha': 2, 'beta': 1, 'seed': 42},
-        {'num_cities': 200, 'density': 1.0, 'alpha': 1, 'beta': 2, 'seed': 42},
-    ]
-    
-    print("Running comparison on 20-city problems...")
-    results_20 = compare_algorithms(test_configs)
+    print(f"Running comparison on {base_num_cities}-city problems...")
+    results_base_num_cities = compare_algorithms(test_configs)
     
     # Uncomment to run on 200-city problems (will take much longer)
     # print("\n\nRunning comparison on 200-city problems...")
     # results_200 = compare_algorithms(large_test_configs)
     
-    return results_20
+    return results_base_num_cities
 
 
 if __name__ == "__main__":
