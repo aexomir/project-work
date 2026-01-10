@@ -45,6 +45,8 @@ class ConservativeOptimizer(BaseOptimizer):
                     dist_to_depot[city] = float('inf')
         
         solution = []
+        # Start at depot (0, 0) - requirement: thief must start at (0, 0)
+        solution.append((0, 0))
         current_weight = 0.0
         
         # Conservative weight threshold - return to depot frequently
