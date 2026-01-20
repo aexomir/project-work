@@ -6,7 +6,6 @@ import logging
 import sys
 from pathlib import Path
 
-# Add src to path to allow imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from baseline.baseline_impl import Problem
@@ -14,13 +13,8 @@ from icecream import ic
 
 
 def main():
-    """
-    Execute baseline algorithm with same parameters as notebook Cell 5
-    """
-    # Set logging level exactly as in notebook
     logging.getLogger().setLevel(logging.WARNING)
 
-    # Run the exact same 12 test cases from Cell 5
     results = []
     
     result = ic(Problem(100, density=0.2, alpha=1, beta=1).baseline())
@@ -59,7 +53,6 @@ def main():
     result = ic(Problem(1_000, density=1, alpha=1, beta=2).baseline())
     results.append(("Problem(1_000, density=1, alpha=1, beta=2)", result))
 
-    # Save results to outputs/ directory
     output_dir = Path(__file__).parent.parent.parent / "outputs"
     output_dir.mkdir(exist_ok=True)
     
