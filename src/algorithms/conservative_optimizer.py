@@ -8,6 +8,28 @@ from utils.evaluator import evaluate_solution
 from utils.helpers import nearest_neighbor_tour, two_opt_improve
 
 
+def _expand_path_to_direct_edges(problem, solution: List[Tuple[int, float]]) -> List[Tuple[int, float]]:
+    """Expand solution so every consecutive pair has a direct edge. Inserts intermediates with gold=0."""
+    if len(solution) < 2:
+        return solution
+    expanded = [solution[0]]
+    for i in range(len(solution) - 1):
+        c1, g1 = solution[i]
+        c2, g2 = solution[i + 1]
+        if problem._graph.has_edge(c1, c2):
+            expanded.append((c2, g2))
+            continue
+        try:
+            path = nx.shortest_path(problem._graph, c1, c2, weight='dist')
+        except nx.NetworkXNoPath:
+            expanded.append((c2, g2))
+            continue
+        for node in path[1:-1]:
+            expanded.append((node, 0.0))
+        expanded.append((c2, g2))
+    return expanded
+
+
 class ConservativeOptimizer(BaseOptimizer):
 
     def __init__(self, problem, max_iterations: int = 1, verbose: bool = False, seed: int = None):
@@ -66,8 +88,8 @@ class ConservativeOptimizer(BaseOptimizer):
             gold_ratio = np.clip(gold_ratio, 0.05, 0.85)
             gold_to_collect = max_gold * gold_ratio
             
-            if (current_weight > weight_threshold and 
-                i < len(improved_tour) - 2 and 
+            if (current_weight > weight_threshold and
+                i < len(improved_tour) - 2 and
                 depot_dist < 8.0):
                 solution.append((0, 0))
                 current_weight = 0.0
@@ -76,7 +98,7 @@ class ConservativeOptimizer(BaseOptimizer):
             current_weight += gold_to_collect
         
         solution.append((0, 0))
-        return solution
+        return _expand_path_to_direct_edges(self.problem, solution)
     
     def optimize(self) -> Tuple[List[Tuple[int, float]], float]:
         self.start_time = time.time()

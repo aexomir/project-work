@@ -65,14 +65,13 @@ def evaluate_solution(problem, solution: List[Tuple[int, float]]) -> float:
 def validate_solution(problem, solution: List[Tuple[int, float]]) -> Tuple[bool, str]:
     if not solution:
         return False, "Solution is empty"
-    
-    
+
     if solution[-1] != (0, 0):
         return False, "Solution must end at depot (0, 0)"
-    
-    visited_cities = set()
+
+    collected_cities = set()
     num_cities = len(problem._graph.nodes)
-    
+
     for city, gold in solution:
         if city == 0:
             if gold != 0:
@@ -80,22 +79,20 @@ def validate_solution(problem, solution: List[Tuple[int, float]]) -> Tuple[bool,
         else:
             if city < 0 or city >= num_cities:
                 return False, f"Invalid city index: {city}"
-            
-            if city in visited_cities:
-                return False, f"City {city} visited multiple times"
-            
-            visited_cities.add(city)
-            
-            
+
             max_gold = problem._graph.nodes[city]['gold']
             if gold < 0 or gold > max_gold:
                 return False, f"Invalid gold amount at city {city}: {gold} (max: {max_gold})"
-    
-    
+
+            if gold > 0:
+                if city in collected_cities:
+                    return False, f"City {city} collected from multiple times"
+                collected_cities.add(city)
+
     expected_cities = set(range(1, num_cities))
-    if visited_cities != expected_cities:
-        missing = expected_cities - visited_cities
-        return False, f"Not all cities visited. Missing: {missing}"
-    
+    if collected_cities != expected_cities:
+        missing = expected_cities - collected_cities
+        return False, f"Not all cities collected from. Missing: {missing}"
+
     return True, "Valid solution"
 
